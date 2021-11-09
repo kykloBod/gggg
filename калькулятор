@@ -1,0 +1,103 @@
+package com.company;
+
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        System.out.println("Введите 1 чтобы перейти к элементарным операциям");
+        System.out.println("Введите 2 чтобы перейти к триганометрическим операциям");
+        Scanner scanner = new Scanner(System.in);
+        byte sk = scanner.nextByte();
+
+        if (sk == 1) {
+            System.out.println("Введите 1 чтобы перейти к сложению");
+            System.out.println("Введите 2 чтобы перейти к вычитанию");
+            System.out.println("Введите 3 чтобы перейти к умножению");
+            System.out.println("Введите 4 чтобы перейти к делению");
+            byte eo = scanner.nextByte();
+            if (eo == 1) {
+                System.out.println("Введите переменную a");
+                double a = scanner.nextDouble();
+                System.out.println("Введите переменную b");
+                double b = scanner.nextDouble();
+                double n = a + b;
+                System.out.println("Результат сложения равен: " + n);
+            }
+            if (eo == 2) {
+                System.out.println("Введите переменную a");
+                double a = scanner.nextDouble();
+                System.out.println("Введите переменную b");
+                double b = scanner.nextDouble();
+                double n = a - b;
+                System.out.println("Результат вычитания равен: " + n);
+            }
+            if (eo == 3) {
+                System.out.println("Введите переменную a");
+                double a = scanner.nextDouble();
+                System.out.println("Введите переменную b");
+                double b = scanner.nextDouble();
+                double n = a * b;
+                System.out.println("Результат умножения равен: " + n);
+            }
+            if (eo == 4) {
+                System.out.println("Введите переменную a");
+                double a = scanner.nextDouble();
+                System.out.println("Введите переменную b");
+                double b = scanner.nextDouble();
+                if (b == 0) {
+                    System.out.println("Заменатель равен 0");
+                } else {
+                    double n = a / b;
+                    System.out.println("Результат деления равен: " + n);
+                }
+            }
+        }
+        if (sk == 2) {
+            System.out.println("Введите 1 чтобы вычислить sin x");
+            System.out.println("Введите 2 чтобы вычислить cos x");
+            System.out.println("Введите 3 чтобы вычислить tan x");
+            System.out.println("Введите 4 чтобы вычислить ctg x");
+            System.out.println("Введите 5 чтобы вычислить sin 2x");
+
+            byte tr = scanner.nextByte();
+            if (tr == 1) {
+                System.out.println("Введите x");
+                double x = scanner.nextDouble();
+                x = Math.sin(x);
+                System.out.println("Значение x: " + x);
+            }
+            if (tr == 2) {
+                System.out.println("Введите x");
+                double x = scanner.nextDouble();
+                x = Math.cos(x);
+                System.out.println("Значение x: " + x);
+            }
+            if (tr == 3) {
+                System.out.println("Введите x");
+                double x = scanner.nextDouble();
+                x = Math.tan(x);
+                System.out.println("Значение x: " + x);
+            }
+            if (tr == 4) {
+                System.out.println("Введите x");
+                double x = scanner.nextDouble();
+                x = Math.cos(x) / Math.sin(x);
+                System.out.println("Значение x: " + x);
+            }
+            if (tr == 5) {
+                System.out.println("Введите x");
+                double x = scanner.nextDouble();
+                Math.toRadians(x);
+                x = 2 * (Math.sin(x)) * (Math.cos(x));
+                System.out.println("sin 2x: " + x);
+            }
+            
+        }
+
+
+    }
+}
+
